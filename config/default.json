@@ -1,8 +1,6 @@
 {
   "jwtPrivateKey": "unsecureKey",
-  "db": "mongodb://react-first-go-dbuser:a12345@ds161092.mlab.com:61092/react-first-go",
+  "db": "mongodb://localhost/vidly",
   "port": "3900",
   "requiresAuth": true
 }
-
-
