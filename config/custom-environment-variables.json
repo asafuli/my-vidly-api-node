@@ -1,5 +1,6 @@
 {
   "jwtPrivateKey": "vidly_jwtPrivateKey",
-  "db": "react-first-go-db"
+  "db": "react_first_go_db"
 }
+
 
