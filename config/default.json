@@ -1,6 +1,6 @@
 {
   "jwtPrivateKey": "unsecureKey",
-  "db": "react-first-go-db",
+  "db": "mongodb://react-first-go-dbuser:a12345@ds161092.mlab.com:61092/react-first-go",
   "port": "3900",
   "requiresAuth": true
 }

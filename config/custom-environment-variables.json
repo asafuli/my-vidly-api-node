@@ -1,5 +1,5 @@
 {
   "jwtPrivateKey": "vidly_jwtPrivateKey",
-  "db": "mongodb://react-first-go-dbuser:a12345@ds161092.mlab.com:61092/react-first-go"
+  "db": "react-first-go-db"
 }
 
