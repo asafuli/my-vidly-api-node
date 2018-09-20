@@ -75,9 +75,8 @@ router.delete("/:id", [auth, admin], async (req, res) => {
 });
 
 router.get("/:id", validateObjectId, async (req, res) => {
-  const movie = await Movie.findById(req.params.id).select("-__v");
   console.log("router.get :" , req.params.id);
-
+  const movie = await Movie.findById(req.params.id).select("-__v");
   if (!movie)
     return res.status(404).send("The movie with the given ID was not found.");
 
