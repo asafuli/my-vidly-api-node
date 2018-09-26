@@ -3,4 +3,8 @@
   "db": "mongodb://localhost/vidly",
   "port": "3900",
   "requiresAuth": true
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> my-origin/master
