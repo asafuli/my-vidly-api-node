@@ -5,9 +5,13 @@ const { User, validate } = require("../models/user");
 const express = require("express");
 const router = express.Router();
 
+
 router.get("/me", auth, async (req, res) => {
+  console.log(req);
+  console.log(req.cookies);
   const user = await User.findById(req.user._id).select("-password");
-  res.send(user);
+  res
+  .send(user);
 });
 
 router.post("/", async (req, res) => {
@@ -23,7 +27,9 @@ router.post("/", async (req, res) => {
   await user.save();
 
   const token = user.generateAuthToken();
+
   res
+    .cookie(req.body.name, token, { maxAge: 200000000 , httpOnly: false })
     .header("x-auth-token", token)
     .header("access-control-expose-headers", "x-auth-token")
     .send(_.pick(user, ["_id", "name", "email"]));

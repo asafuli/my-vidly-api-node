@@ -7,6 +7,7 @@ const users = require('../routes/users');
 const auth = require('../routes/auth');
 const returns = require('../routes/returns');
 const error = require('../middleware/error');
+var cookieParser = require ('cookie-parser');
 
 module.exports = function(app) {
   app.use(express.json());
@@ -18,4 +19,5 @@ module.exports = function(app) {
   app.use('/api/auth', auth);
   app.use('/api/returns', returns);
   app.use(error);
+  app.use(cookieParser());
 }
